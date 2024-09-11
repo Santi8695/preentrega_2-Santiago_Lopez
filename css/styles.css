@@ -1,0 +1,552 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Estilos Body*/
+body {
+    background-color: #C38154;
+}
+
+
+/* Estilos Header */
+
+header {
+    background-color: #884a39;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+}
+
+header a {
+    display: inline;
+}
+
+header a img {
+    display: inline;
+    width: 45%;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 24px;
+    padding-right: 16px;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+}
+
+header nav ul li:hover {
+    padding: 0 4px;
+    background-color: #C38154;
+    transition: all 0.2s ease-in;
+
+}
+
+.ul__li--tamaño {
+    font-family: Montserrat;
+    font-size: 14px;
+}
+
+*span.ico {
+    height: 10px;
+    width: 10px;
+}
+
+.menuHamurguesa {
+    color: rgb(255, 255, 255);
+    transition: all 0.2s ease-in;
+    border: none;
+}
+
+.menuHamurguesa:hover {
+    background-color: #C38154;
+}
+
+.button__nav--border {
+    border: none;
+}
+
+.button__nav--border:hover {
+    background-color: #C38154;
+}
+
+/* estilos hero */
+main img {
+    width: 100%;
+    height: 600px;
+}
+
+main div .textos h1 {
+    position: absolute;
+    top: 260px;
+    margin-left: 12px;
+    color: white;
+    font-size: 64px;
+
+}
+
+main div .textos span {
+    display: block;
+    text-align: center;
+}
+
+main div .textos span.nombrePag {
+    display: inline;
+    color: rgb(255, 136, 0);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+div.distribucion {
+    display: grid;
+    grid-template-columns: 500px auto;
+    grid-template-rows: 1fr;
+    margin: 16px;
+    gap: 16px;
+}
+
+/* estilos aside */
+
+/* Indice elementos*/
+
+div.distribucion div.panelesCostado aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.distribucion section.discos aside.lista {
+    background-color: #DBA966;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    grid-column: 1/5;
+}
+
+div.distribucion section.discos aside.lista ul {
+    list-style: none;
+    padding: 16px;
+    text-align: center;
+}
+
+div.distribucion section.discos aside.lista ul li {
+    font-size: 24px;
+}
+
+div.distribucion section.discos aside.lista ul li a {
+    text-decoration: none;
+    color: #000000;
+
+}
+
+/* Formulario encargo de disco */
+div.distribucion div.panelesCostado aside.encargoDisco {
+    display: flex;
+    background-color: #DBA966;
+    color: rgb(0, 0, 0);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 2px solid black;
+    position: sticky;
+    top: 340px;
+    height: 50vh;
+    padding: 0 36px;
+}
+
+div.distribucion div.panelesCostado aside.encargoDisco h2 {
+    font-size: 24px;
+}
+
+div.distribucion div.panelesCostado aside.encargoDisco form label {
+    font-size: 16px;
+}
+
+div.distribucion div.panelesCostado aside.encargoDisco form input {
+    margin: 8px;
+}
+
+div.distribucion div.panelesCostado aside.encargoDisco form div.botones input {
+    padding: 6px;
+    border-radius: 32px;
+}
+
+div.distribucion div.panelesCostado div.flechaSubir {
+    position: sticky;
+    top: 660px;
+    padding-top: 195px;
+    text-align: start;
+    justify-content: center;
+}
+
+div.distribucion div.panelesCostado div.flechaSubir img.flecha {
+    width: 60px;
+    height: 60px;
+}
+
+div.distribucion div.panelesCostado form div.formulariosEncargo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+/* Estilos Seccion Catalogo*/
+
+div.distribucion section.discos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding-bottom: 16px;
+    justify-content: center;
+    text-align: center;
+}
+
+div.distribucion section.discos h2.subtitulo {
+    grid-column: 1/ 5;
+    border: 2px solid black;
+    background-color: #884a39;
+    text-align: center;
+    color: white;
+    padding: 32px;
+
+}
+
+
+div.distribucion section.discos article {
+    border: 2px solid black;
+    max-width: 250px;
+    margin-left: 24px;
+}
+
+div.distribucion section.discos article.tarjetaDisco img {
+    width: 230px;
+    height: 180px;
+}
+
+div.distribucion section.discos article.tarjetaDisco {
+    background-color: #ffbd66;
+    display: inline-block;
+    border-radius: 12px;
+    box-shadow: 6px 8px 10px #ff970e;
+    height: 320px;
+}
+
+div.distribucion section.discos article.tarjetaDisco:hover {
+    background-color: #ff970e;
+}
+
+div.distribucion section.discos article.tarjetaDisco p.precio {
+    color: rgb(255, 0, 0);
+    font-weight: bolder;
+}
+
+div.distribucion section.discos article img {
+    width: 400px;
+    height: 180px;
+    padding: 8px;
+}
+
+/* Estilos del html de artistas*/
+h2.subtitulo {
+    background-color: #884A39;
+    color: white;
+    font-size: 32px;
+    border: 2px solid black;
+}
+
+article.artista1 h3 {
+    display: inline-block;
+    color: black;
+    background-color: #DBA966;
+}
+
+article.artista1 section.nombreArtista h3 {
+    display: inline-block;
+
+    color: black;
+
+    font-size: 24px;
+
+    border: 2px solid black;
+    text-align: center;
+}
+
+article.artista1 section.nombreArtista img {
+    border: 2px solid black;
+
+}
+
+article.artista1 section.informacion {}
+
+article.artista1 section.informacion h3 {
+    display: inline-block;
+    text-align: center;
+    border: 2px solid black;
+    background-color: #DBA966;
+}
+
+article.artista1 section.informacion p {
+
+    color: black;
+    background-color: #ffbd66;
+    border: 2px solid black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+article.artista1 section.informacion p span {
+    display: block;
+}
+
+article.artista1 section.informacion p span.grupos span,
+article.artista1 section.informacion p span.artistasRelacionados span {}
+
+/* Estilos discografica formato lista*/
+
+article.artista1 section.discografiaLista {}
+
+article.artista1 section.discografiaLista h3 {
+    display: inline-block;
+    text-align: center;
+    border: 2px solid black;
+    background-color: #DBA966;
+}
+
+article.artista1 section.discografiaLista ul {
+
+    color: black;
+    background-color: #ffbd66;
+    border: 2px solid black;
+    font-family: 'Times New Roman', Times, serif;
+    list-style: none;
+}
+
+article.artista1 section.discografiaLista ul li {
+    padding-top: 8px;
+    text-align: center;
+}
+
+article.artista1 section.redesArtista h3 {
+    display: inline-block;
+    position: absolute;
+    top: 1310px;
+    left: 512px;
+    text-align: center;
+    padding: 8px 114px;
+    border: 2px solid black;
+    background-color: #DBA966;
+    width: 598px;
+}
+
+article.artista1 section.redesArtista div.redesSociales {
+    display: inline-block;
+    position: relative;
+    top: 594px;
+    left: 512px;
+    padding: 8px;
+    background-color: #ffbd66;
+    padding: 8px 231px;
+    border: 2px solid black;
+}
+
+article.artista1 section.redesArtista div.redesSociales a img {
+    width: 30px;
+}
+
+article.artista1 section.albumes h3 {
+    display: inline-block;
+    background-color: #DBA966;
+    border: 2px solid black;
+
+}
+
+article.artista1 section.albumes div.discosSpotify {
+    position: relative;
+    top: -4px;
+    right: 53px;
+    margin-left: 1213px;
+    ;
+    background-color: #ffbd66;
+    height: 620px;
+    border: 2px solid black;
+}
+
+
+/* estilos galeria*/
+
+main video.vid {
+    display: inline-block;
+    margin: 8px 128px;
+    height: 600px;
+    width: 85%;
+}
+
+article.fotos h1 {
+    background-color: #884A39;
+    color: white;
+    font-size: 48px;
+    text-align: center;
+    margin: 6px;
+    border: 2px solid black;
+}
+
+article.fotos h2 {
+    background-color: #DBA966;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    margin: 8px 64px;
+    border: 2px solid black;
+}
+
+article.fotos section.contenedorFotos img,
+section.contenedorVideos video {
+    width: 400px;
+    height: 280px;
+    margin: 16px 36px;
+    background-color: #ffbd66;
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 16px;
+}
+
+/* estilos sobre nosotros */
+main h1.tituloConocenos {
+    background-color: #884A39;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+
+    border: 2px solid black;
+}
+
+section.historia article,
+section.horarios,
+section.ubicacion {
+    display: inline-block;
+    background-color: #ffbd66;
+    text-align: center;
+
+    border: 2px solid black;
+}
+
+section.historia p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+section.historia p span.musicTrip {
+    color: #d66800;
+    font-weight: bolder;
+    font-family: Montserrat;
+    font-size: 14px;
+}
+
+section.historia p span.destacado {
+    color: #000000;
+    font-weight: bolder;
+    font-family: Montserrat;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+section.horarios {}
+
+section.horarios table {
+    border: 2px solid black;
+}
+
+section.horarios table tr td {
+    border: 1px solid black;
+    fill: black;
+    text-align: center;
+    padding: 4px;
+}
+
+section.ubicacion {}
+
+section.ubicacion h2 {}
+
+section.ubicacion div {
+    border: 2px solid black;
+}
+
+/* estilos contactanos*/
+main div.subTituloContacto {
+    background-color: #884A39;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    border: 2px solid black;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+    box-shadow: 12px 12px 6px #8d6358;
+}
+
+main div.subTituloContacto h2 {
+    color: rgb(255, 145, 0);
+    font-size: 64px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+main div.formularioContacto {
+    background-color: #DBA966;
+    border: 2px solid black;
+    text-align: center;
+    text-align: center;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    box-shadow: 12px 12px 6px #d1b591;
+}
+
+main div.formularioContacto form div {}
+
+main div.formularioContacto form div.mensajeNombre label {}
+
+main div.formularioContacto form div.mensajeNombre input {}
+
+main div.formularioContacto form div.mensajeCorreo input {}
+
+main div.formularioContacto form div.mensajeTextArea label {}
+
+main div.formularioContacto form div.mensajeTextArea textarea {}
+
+main div.formularioContacto form div.botones input {
+    color: rgb(0, 0, 0);
+    background-color: #ffbd66;
+    text-align: center;
+}
+
+main div.formularioContacto form div input {}
+
+/* Estilos Footer*/
+footer {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #884a39;
+}
+
+footer p {
+    color: white;
+    padding: 12px 0 0 4px;
+    align-items: center;
+}
+
+footer div.redesSociales a img {
+    width: 34px;
+    padding-right: 8px;
+}

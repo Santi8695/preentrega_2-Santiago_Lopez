@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fuente importada de Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <title> Music Trip | Artistas Vinculados </title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="../index.html"><img src="../iconos/musicTripIcono.png" alt="Logo de la web de Music Trip"></a>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler button__nav--border" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="menuHamurguesa">☰</span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active text-white ul__li--tamaño" aria-current="page" href="../index.html">Catalogo</a></li>
+                        <li class="nav-item"><a class="nav-link active text-white ul__li--tamaño" aria-current="page" href="aristas.html">Artistas Vinculados</a></li>
+                        <li class="nav-item"><a class="nav-link active text-white ul__li--tamaño" aria-current="page" href="galeria.html">Galeria</a></li>
+                        <li class="nav-item"><a class="nav-link active text-white ul__li--tamaño" aria-current="page" href="sobreNosotros.html">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link active text-white ul__li--tamaño" aria-current="page" href="contactanos.html">Contactanos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="subTituloContacto">
+            <h1>¿Tienes dudas sobre algo?</h1>
+            <h2>¡Contactanos!</h2>
+        </div>
+
+        <div class="formularioContacto">
+            <form>
+                <div class="mensajeNombre">
+                    <label for="text">Nombre Completo:</label>
+                    <input type="text">
+                </div>
+                
+                <div class="mensajeCorreo">
+                    <label for="email">Correo:</label>
+                    <input type="email">
+                </div>
+
+                <div class="mensajeTextArea">
+                    <label for="text">Mensaje:</label>
+                    <textarea name="mensajeContacto" id="" rows="10" columns="50"></textarea>
+
+                </div>
+                <div class="botones">
+                    <input type="submit">
+                    <input type="reset">
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>Todos los derechos reservados, pagina sin fin de lucro ni promocion</p>
+
+        <!-- Iconos Redes Sociales-->
+        <div class="redesSociales">
+            <a href="https://www.facebook.com/" target="_blank"><img src="../iconos/facebook.svg" alt="Logo de facebook"></a>
+            <a href="https://www.instagram.com/santii_8695/" target="_blank"><img src="../iconos/instagram.svg"
+                    alt="Logo de instagram"></a>
+            <a href="https://x.com/home/" target="_blank"><img src="../iconos/twitter.svg" alt="Logo de twitter"></a>
+            <a href="https://www.reddit.com/" target="_blank"><img src=" ../iconos/reddit.svg" alt="Logo de reddit"></a>
+        </div>
+
+    </footer>
+
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>
