@@ -5,15 +5,12 @@
     box-sizing: border-box;
 }
 
-
-/* Estilos Body*/
+/* Estilos Body */
 body {
     background-color: #C38154;
 }
 
-
 /* Estilos Header */
-
 header {
     background-color: #884a39;
     display: flex;
@@ -22,12 +19,7 @@ header {
     padding: 4px;
 }
 
-header a {
-    display: inline;
-}
-
 header a img {
-    display: inline;
     width: 45%;
 }
 
@@ -37,9 +29,6 @@ header nav ul {
     align-items: center;
     gap: 24px;
     padding-right: 16px;
-}
-
-header nav ul li {
     list-style: none;
 }
 
@@ -47,11 +36,10 @@ header nav ul li a {
     text-decoration: none;
 }
 
-header nav ul li:hover {
-    padding: 0 4px;
+header nav ul li a:hover,
+header nav ul li a:active {
+    padding: 4px;
     background-color: #C38154;
-    transition: all 0.2s ease-in;
-
 }
 
 .ul__li--tamaño {
@@ -59,50 +47,46 @@ header nav ul li:hover {
     font-size: 14px;
 }
 
-*span.ico {
+span.ico {
     height: 10px;
     width: 10px;
 }
 
-.menuHamurguesa {
-    color: rgb(255, 255, 255);
-    transition: all 0.2s ease-in;
-    border: none;
-}
-
-.menuHamurguesa:hover {
-    background-color: #C38154;
-}
-
+.menuHamurguesa,
 .button__nav--border {
     border: none;
 }
 
+.menuHamurguesa:hover,
 .button__nav--border:hover {
     background-color: #C38154;
 }
 
-/* estilos hero */
+/* Estilos hero */
 main img {
     width: 100%;
     height: 600px;
 }
 
-main div .textos h1 {
+main .textos h1 {
     position: absolute;
-    top: 260px;
+    top: 180px;
+    left: 6px;
     margin-left: 12px;
     color: white;
     font-size: 64px;
-
 }
 
-main div .textos span {
+.misEstilos {
+    max-height: 600px;
+}
+
+main .textos span {
     display: block;
     text-align: center;
 }
 
-main div .textos span.nombrePag {
+main .textos span.nombrePag {
     display: inline;
     color: rgb(255, 136, 0);
     font-weight: bold;
@@ -111,28 +95,23 @@ main div .textos span.nombrePag {
 
 div.distribucion {
     display: grid;
-    grid-template-columns: 500px auto;
+    grid-template-columns: 420px auto;
     grid-template-rows: 1fr;
     margin: 16px;
     gap: 16px;
 }
 
-/* estilos aside */
-
-/* Indice elementos*/
-
-div.distribucion div.panelesCostado aside {
+/* Estilos aside */
+div.distribucion aside {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #DBA966;
+    border: 2px solid black;
 }
 
 div.distribucion section.discos aside.lista {
-    background-color: #DBA966;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
     grid-column: 1/5;
 }
 
@@ -148,61 +127,89 @@ div.distribucion section.discos aside.lista ul li {
 
 div.distribucion section.discos aside.lista ul li a {
     text-decoration: none;
-    color: #000000;
-
+    color: #000;
 }
 
-/* Formulario encargo de disco */
-div.distribucion div.panelesCostado aside.encargoDisco {
+div.distribucion section.discos aside.lista ul li a:hover {
+    color: #fff;
+    background-color: #884a39;
+    padding: 4px;
+}
+
+div.distribucion section.discos aside.lista ul li a:active {
+    color: #bbb;
+    background-color: #6e392a;
+}
+
+div.distribucion aside.encargoDisco {
     display: flex;
-    background-color: #DBA966;
-    color: rgb(0, 0, 0);
+    color: #000;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    border: 2px solid black;
     position: sticky;
     top: 340px;
     height: 50vh;
-    padding: 0 36px;
 }
 
-div.distribucion div.panelesCostado aside.encargoDisco h2 {
-    font-size: 24px;
+div.distribucion aside.encargoDisco form div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
-div.distribucion div.panelesCostado aside.encargoDisco form label {
-    font-size: 16px;
+
+div.distribucion aside.encargoDisco h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: bolder;
 }
 
-div.distribucion div.panelesCostado aside.encargoDisco form input {
+div.distribucion aside.encargoDisco form input {
     margin: 8px;
 }
 
-div.distribucion div.panelesCostado aside.encargoDisco form div.botones input {
-    padding: 6px;
-    border-radius: 32px;
+.formulariosEncargo input:focus {
+    border: 4px solid #da8405;
+    background-color: #e9d3b7;
 }
 
-div.distribucion div.panelesCostado div.flechaSubir {
+div.distribucion aside.encargoDisco form label {
+    font-size: 16px;
+    margin: auto;
+}
+
+.subir,
+.resetear {
+    border-radius: 32px;
+    width: 120px;
+    margin: auto;
+    margin-top: 32px;
+}
+
+.subir:hover,
+.resetear:hover {
+    background-color: #d3d1d1;
+}
+
+div.distribucion div.flechaSubir {
     position: sticky;
-    top: 660px;
-    padding-top: 195px;
+    top: 880px;
     text-align: start;
     justify-content: center;
 }
 
-div.distribucion div.panelesCostado div.flechaSubir img.flecha {
+div.distribucion div.flechaSubir img.flecha {
     width: 60px;
     height: 60px;
 }
 
-div.distribucion div.panelesCostado form div.formulariosEncargo {
+div.distribucion form.formulariosEncargo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
 }
 
-
-/* Estilos Seccion Catalogo*/
-
+/* Estilos Sección Catálogo */
 div.distribucion section.discos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -213,15 +220,12 @@ div.distribucion section.discos {
 }
 
 div.distribucion section.discos h2.subtitulo {
-    grid-column: 1/ 5;
+    grid-column: 1/5;
     border: 2px solid black;
     background-color: #884a39;
-    text-align: center;
     color: white;
     padding: 32px;
-
 }
-
 
 div.distribucion section.discos article {
     border: 2px solid black;
@@ -229,21 +233,16 @@ div.distribucion section.discos article {
     margin-left: 24px;
 }
 
-div.distribucion section.discos article.tarjetaDisco img {
-    width: 230px;
-    height: 180px;
-}
-
 div.distribucion section.discos article.tarjetaDisco {
     background-color: #ffbd66;
     display: inline-block;
     border-radius: 12px;
-    box-shadow: 6px 8px 10px #ff970e;
+    box-shadow: 6px 8px 10px #fdac42;
     height: 320px;
 }
 
 div.distribucion section.discos article.tarjetaDisco:hover {
-    background-color: #ff970e;
+    background-color: #e7ab5b;
 }
 
 div.distribucion section.discos article.tarjetaDisco p.precio {
@@ -252,16 +251,19 @@ div.distribucion section.discos article.tarjetaDisco p.precio {
 }
 
 div.distribucion section.discos article img {
-    width: 400px;
+    width: 240px;
     height: 180px;
     padding: 8px;
 }
 
-/* Estilos del html de artistas*/
+/* Estilos del HTML de artistas */
 h2.subtitulo {
     background-color: #884A39;
     color: white;
     font-size: 32px;
+    text-align: center;
+    padding: 10px;
+    margin: 8px;
     border: 2px solid black;
 }
 
@@ -273,35 +275,49 @@ article.artista1 h3 {
 
 article.artista1 section.nombreArtista h3 {
     display: inline-block;
-
+    position: absolute;
     color: black;
-
+    padding: 24px 128px;
     font-size: 24px;
-
+    margin: 16px;
+    width: 450px;
+    height: 75px;
     border: 2px solid black;
+    padding-bottom: 72px;
     text-align: center;
 }
 
 article.artista1 section.nombreArtista img {
+    position: absolute;
+    top: 864px;
+    left: 16px;
+    width: 450px;
+    height: 600px;
     border: 2px solid black;
-
 }
 
-article.artista1 section.informacion {}
+article.artista1 section.informacion {
+    position: absolute;
+    top: 800px;
+    left: 512px;
+}
 
 article.artista1 section.informacion h3 {
     display: inline-block;
     text-align: center;
+    padding: 8px 250px;
     border: 2px solid black;
     background-color: #DBA966;
 }
 
 article.artista1 section.informacion p {
-
+    position: absolute;
+    top: 40px;
     color: black;
     background-color: #ffbd66;
     border: 2px solid black;
     font-family: 'Times New Roman', Times, serif;
+    padding: 8px 4px;
 }
 
 article.artista1 section.informacion p span {
@@ -309,25 +325,34 @@ article.artista1 section.informacion p span {
 }
 
 article.artista1 section.informacion p span.grupos span,
-article.artista1 section.informacion p span.artistasRelacionados span {}
+article.artista1 section.informacion p span.artistasRelacionados span {
+    padding-top: 8px;
+}
 
-/* Estilos discografica formato lista*/
-
-article.artista1 section.discografiaLista {}
+article.artista1 section.discografiaLista {
+    position: absolute;
+    top: 1010px;
+    left: 512px;
+}
 
 article.artista1 section.discografiaLista h3 {
     display: inline-block;
     text-align: center;
+    padding: 8px 114px;
     border: 2px solid black;
     background-color: #DBA966;
+    width: 598px;
 }
 
 article.artista1 section.discografiaLista ul {
-
+    position: absolute;
+    top: 40px;
     color: black;
     background-color: #ffbd66;
+    padding: 8px;
     border: 2px solid black;
     font-family: 'Times New Roman', Times, serif;
+    width: 598px;
     list-style: none;
 }
 
@@ -342,32 +367,24 @@ article.artista1 section.redesArtista h3 {
     top: 1310px;
     left: 512px;
     text-align: center;
-    padding: 8px 114px;
+    padding: 8px 150px;
     border: 2px solid black;
     background-color: #DBA966;
-    width: 598px;
 }
 
-article.artista1 section.redesArtista div.redesSociales {
-    display: inline-block;
-    position: relative;
-    top: 594px;
-    left: 512px;
-    padding: 8px;
-    background-color: #ffbd66;
-    padding: 8px 231px;
-    border: 2px solid black;
-}
-
-article.artista1 section.redesArtista div.redesSociales a img {
-    width: 30px;
+article.artista1 section.redesArtista a img {
+    width: 60px;
+    height: 60px;
+    margin: 4px;
 }
 
 article.artista1 section.albumes h3 {
     display: inline-block;
     background-color: #DBA966;
+    padding: 8px 256px;
     border: 2px solid black;
-
+    position: relative;
+    left: 1160px;
 }
 
 article.artista1 section.albumes div.discosSpotify {
@@ -426,7 +443,8 @@ main h1.tituloConocenos {
     color: white;
     font-size: 32px;
     text-align: center;
-
+    padding: 10px;
+    margin: 8px;
     border: 2px solid black;
 }
 
@@ -436,8 +454,9 @@ section.ubicacion {
     display: inline-block;
     background-color: #ffbd66;
     text-align: center;
-
+    margin: 24px;
     border: 2px solid black;
+    padding: 8px 8px;
 }
 
 section.historia p {
@@ -459,7 +478,9 @@ section.historia p span.destacado {
     text-decoration: underline;
 }
 
-section.horarios {}
+section.horarios {
+    margin: 8px 620px;
+}
 
 section.horarios table {
     border: 2px solid black;
@@ -472,9 +493,13 @@ section.horarios table tr td {
     padding: 4px;
 }
 
-section.ubicacion {}
+section.ubicacion {
+    margin: 8px 520px;
+}
 
-section.ubicacion h2 {}
+section.ubicacion h2 {
+    padding-bottom: 8px;
+}
 
 section.ubicacion div {
     border: 2px solid black;
@@ -486,6 +511,8 @@ main div.subTituloContacto {
     color: white;
     font-size: 32px;
     text-align: center;
+    padding: 10px;
+    margin: 20px 120px;
     border: 2px solid black;
     border-top-right-radius: 24px;
     border-top-left-radius: 24px;
@@ -503,31 +530,58 @@ main div.formularioContacto {
     background-color: #DBA966;
     border: 2px solid black;
     text-align: center;
+    margin: 20px 120px;
     text-align: center;
+    height: 800px;
+    position: relative;
+    top: -22px;
     border-bottom-right-radius: 24px;
     border-bottom-left-radius: 24px;
     box-shadow: 12px 12px 6px #d1b591;
 }
 
-main div.formularioContacto form div {}
+main div.formularioContacto form div {
+    margin: 100px 120px;
 
-main div.formularioContacto form div.mensajeNombre label {}
+}
 
-main div.formularioContacto form div.mensajeNombre input {}
+main div.formularioContacto form div.mensajeNombre label {
+    position: relative;
+    right: 32px;
+}
 
-main div.formularioContacto form div.mensajeCorreo input {}
+main div.formularioContacto form div.mensajeNombre input {
+    position: relative;
+    right: 32px;
+}
 
-main div.formularioContacto form div.mensajeTextArea label {}
+main div.formularioContacto form div.mensajeCorreo input {
+    position: relative;
+    left: 6px;
+}
 
-main div.formularioContacto form div.mensajeTextArea textarea {}
+main div.formularioContacto form div.mensajeTextArea label {
+    position: relative;
+    bottom: 140px;
+}
+
+main div.formularioContacto form div.mensajeTextArea textarea {
+    width: 600px;
+}
 
 main div.formularioContacto form div.botones input {
     color: rgb(0, 0, 0);
     background-color: #ffbd66;
+    width: 100px;
+    height: 40px;
     text-align: center;
+    margin: 16px;
 }
 
-main div.formularioContacto form div input {}
+main div.formularioContacto form div input {
+    width: 600px;
+    height: 25px;
+}
 
 /* Estilos Footer*/
 footer {
@@ -549,4 +603,49 @@ footer p {
 footer div.redesSociales a img {
     width: 34px;
     padding-right: 8px;
+}
+
+@media (max-width:1280px) {
+    header{
+        width: 100%;
+    }
+
+
+    div.distribucion {
+        display: grid;
+        grid-template-columns: 420 auto;
+    }
+
+    /*ASIDE*/
+
+    div.distribucion section.discos aside.lista {
+        grid-column: 1/3;
+    }
+
+    div.distribucion section.discos aside.lista ul {
+        list-style: none;
+        padding: 16px;
+        text-align: center;
+    }
+
+    div.distribucion section.discos aside.lista ul li {
+        font-size: 24px;
+    }
+
+    div.distribucion section.discos aside.lista ul li a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    div.distribucion section.discos aside.lista ul li a:hover {
+        color: #fff;
+        background-color: #884a39;
+        padding: 4px;
+    }
+
+    div.distribucion section.discos aside.lista ul li a:active {
+        color: #bbb;
+        background-color: #6e392a;
+    }
+
 }
