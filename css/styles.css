@@ -706,140 +706,182 @@ footer div.redesSociales a img {
         color: rgb(255, 0, 0);
         font-weight: bolder;
     }
+}
 
+/* Media Query*/
+@media (max-width:1388px) {
 
-    /* Media Query*/
-    @media (max-width:1388px) {
-
-        div.distribucion {
-            grid-template-columns: 1fr;
-        }
-
-
-        main .textos h1 {
-            position: absolute;
-            top: 180px;
-            left: 6px;
-            margin-left: 12px;
-            color: white;
-            font-size: 42px;
-        }
-
-        div.distribucion section.discos aside.lista {
-            display: grid;
-            padding: 0 48vh;
-        }
-
-        div.distribucion div.panelesCostado aside.encargoDisco {
-            position: relative;
-            top: 0;
-            background-color: #DBA966;
-            border: 2px solid black;
-        }
-
-        div.distribucion aside.encargoDisco h2 {
-            font-size: 36px;
-            font-weight: bold;
-        }
-
-        div.distribucion div.flechaSubir {
-            display: none;
-        }
+    div.distribucion {
+        grid-template-columns: 1fr;
     }
 
-    @media (max-width:990px) {
 
-        div.distribucion {
-            display: grid;
-            grid-template-columns: 1fr;
-        }
+    main .textos h1 {
+        position: absolute;
+        top: 180px;
+        left: 6px;
+        margin-left: 12px;
+        color: white;
+        font-size: 42px;
+    }
 
-        main .textos h1 {
-            display: none;
-        }
+    div.distribucion section.discos aside.lista {
+        display: grid;
+        padding: 0 48vh;
+    }
 
-        div.distribucion section.discos aside.lista {
-            display: none;
-            padding: 0 48vh;
-        }
+    div.distribucion div.panelesCostado aside.encargoDisco {
+        position: relative;
+        top: 0;
+        background-color: #DBA966;
+        border: 2px solid black;
+    }
 
-        div.distribucion section.discos {
-            display: flex;
-            flex-direction: column;
-        }
+    div.distribucion aside.encargoDisco h2 {
+        font-size: 36px;
+        font-weight: bold;
+    }
 
-        div.distribucion section.discos article {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            border: 2px solid black;
-            max-width: 250px;
-            margin-left: 0px;
-        }
+    div.distribucion div.flechaSubir {
+        display: none;
+    }
+}
 
-        div.distribucion div.panelesCostado aside.encargoDisco {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #DBA966;
-            border: 2px solid black;
-        }
+@media (max-width:990px) {
 
-        div.distribucion aside.encargoDisco {
-            display: flex;
-            height: 40vh;
-            width: 50vh;
-        }
+    div.distribucion {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 
-        div.distribucion aside.encargoDisco h2 {
-            font-size: 20px;
-            width: 30vh;
-        }
+    main .textos h1 {
+        display: none;
+    }
 
-        .subir,
-        .resetear {
-            width: 80px;
-            margin-bottom: 8px;
-        }
-    
-        div.distribucion section.discos h2.subtitulo {
-            display: flex;
-            flex-direction: column;
-            height: 6vh;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid black;
-            background-color: #884a39;
-            color: white;
-        }
-        
-        div.distribucion section.discos article {
-            border: 2px solid black;
-            max-width: 250px;
-            margin-left: 24px;
-        }
-        
-        div.distribucion section.discos article.tarjetaDisco {
-            background-color: #ffbd66;
-            display: inline-block;
-            border-radius: 12px;
-            box-shadow: 6px 8px 10px #fdac42;
-            height: 320px;
-        }
-        
-        div.distribucion section.discos article.tarjetaDisco:hover {
-            background-color: #e7ab5b;
-        }
-        
-        div.distribucion section.discos article.tarjetaDisco p.precio {
-            color: rgb(255, 0, 0);
-            font-weight: bolder;
-        }
-        
-        div.distribucion section.discos article img {
-            width: 240px;
-            height: 180px;
-            padding: 8px;
-        }
+    div.distribucion section.discos aside.lista {
+        display: none;
+        padding: 0 48vh;
+    }
+
+    div.distribucion section.discos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.distribucion section.discos article {
+        border: 2px solid black;
+        width: 250px;
+        margin: 0px;
+    }
+
+    div.distribucion div.panelesCostado aside.encargoDisco {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: #DBA966;
+        border: 2px solid black;
+        width: 64vh;
+        margin: auto;
+    }
+
+    div.distribucion aside.encargoDisco {
+        display: flex;
+        height: 45vh;
+        width: 50vh;
+    }
+
+    div.distribucion aside.encargoDisco h2 {
+        font-size: 20px;
+        width: 30vh;
+    }
+
+    .subir,
+    .resetear {
+        width: 70px;
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    div.distribucion section.discos h2.subtitulo {
+        display: none;
+    }
+
+    div.distribucion section.discos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin: auto;
+    }
+
+    div.distribucion section.discos article {
+        border: 2px solid black;
+        width: 250px;
+        margin-left: 24px;
+    }
+
+    div.distribucion section.discos article.tarjetaDisco {
+        background-color: #ffbd66;
+        display: inline-block;
+        border-radius: 12px;
+        box-shadow: 6px 8px 10px #fdac42;
+        height: 320px;
+    }
+}
+
+@media (max-width:645px) {
+    div.distribucion section.discos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.distribucion section.discos article {
+        display: grid;
+        border: 2px solid black;
+        width: 50vh;
+        margin: 0px;
+    }
+
+    div.distribucion div.panelesCostado aside.encargoDisco {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: #DBA966;
+        border: 2px solid black;
+        width: 40vh;
+        margin: auto;
+        height: 45vh;
+        width: 45vh;
+    }
+
+    div.distribucion aside.encargoDisco h2 {
+        font-size: 20px;
+        width: 30vh;
+    }
+
+    .subir,
+    .resetear {
+        width: 70px;
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    div.distribucion section.discos h2.subtitulo {
+        display: none;
+    }
+
+    div.distribucion section.discos {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: auto;
+    }
+
+    div.distribucion section.discos article {
+        border: 2px solid black;
+        width: 40vh;
+        margin-left: 24px;
     }
 }
