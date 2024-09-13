@@ -51,43 +51,40 @@
         </nav>
     </header>
 
+    <body>
+        <main>
 
-    <main>
-        <div class="subTituloContacto">
-            <h1>¿Tienes dudas sobre algo?</h1>
-            <h2>¡Contactanos!</h2>
-        </div>
+            <div class="subTituloContacto">
+                <h1>¿Tienes dudas sobre algo?</h1>
+                <h2>¡Contactanos!</h2>
+            </div>
 
-        <div class="formularioContacto">
-            <form>
-                <div class="mensajeNombre">
-                    <label for="text">Nombre Completo:</label>
-                    <input type="text">
-                </div>
+            <form class="contacto">
 
-                <div class="mensajeCorreo">
-                    <label for="email">Correo:</label>
-                    <input type="email">
-                </div>
+                <label for=" nombre">Nombre:</label>
+                <input type="text" name="nombre" placeholder="ej.: Santiago Lopez">
 
-                <div class="mensajeTextArea">
-                    <label for="text">Mensaje:</label>
-                    <textarea name="mensajeContacto" id="" rows="10" columns="50"></textarea>
+                <label for=" email">Email:</label>
+                <input type="email" name="email" placeholder="ej.: nombre@gmail.com">
 
-                </div>
-                <div class="botones">
-                    <button type="submit">Enviar</button>
-                    <button type="reset">Resetear</button>
-                </div>
+                <textarea name placeholder="Escribe aqui tu mensaje..."></textarea>
+
+                <button class="subir" type="submit"> Enviar </button>
+                <button class="resetear" type="reset"> Reset </button>
+
             </form>
-        </div>
 
-    </main>
+
+
+
+        </main>
+    </body>
+
 
     <!-- Footer -->
-    <footer>
+    <footer class="footerContacto">
 
-        <p>Todos los derechos reservados, pagina sin fin de lucro ni promocion</p>
+        <p>Todos los derechos reservados</p>
 
         <!-- Iconos Redes Sociales-->
         <div class="redesSociales">

@@ -523,8 +523,6 @@ main div.subTituloContacto {
     padding: 10px;
     margin: 20px 120px;
     border: 2px solid black;
-    border-top-right-radius: 24px;
-    border-top-left-radius: 24px;
     box-shadow: 12px 12px 6px #8d6358;
 }
 
@@ -533,63 +531,47 @@ main div.subTituloContacto h2 {
     font-size: 64px;
     text-align: center;
     text-decoration: underline;
+
 }
 
-main div.formularioContacto {
+form.contacto {
     background-color: #DBA966;
+    margin: 40px auto;
+    max-width: 420px;
     border: 2px solid black;
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+}
+
+form.contacto label {
+    margin: auto;
     text-align: center;
-    margin: 20px 120px;
-    text-align: center;
-    height: 800px;
-    position: relative;
-    top: -22px;
-    border-bottom-right-radius: 24px;
-    border-bottom-left-radius: 24px;
-    box-shadow: 12px 12px 6px #d1b591;
-}
-
-main div.formularioContacto form div {
-    margin: 100px 120px;
-
-}
-
-main div.formularioContacto form div.mensajeNombre label {
-    position: relative;
-    right: 32px;
-}
-
-main div.formularioContacto form div.mensajeNombre input {
-    position: relative;
-    right: 32px;
-}
-
-main div.formularioContacto form div.mensajeCorreo input {
-    position: relative;
-    left: 6px;
-}
-
-main div.formularioContacto form div.mensajeTextArea label {
-    position: relative;
-    bottom: 140px;
-}
-
-main div.formularioContacto form div.mensajeTextArea textarea {
-    width: 600px;
-}
-
-main div.formularioContacto form div.botones input {
+    margin: auto;
     color: rgb(0, 0, 0);
-    background-color: #ffbd66;
-    width: 100px;
-    height: 40px;
-    text-align: center;
-    margin: 16px;
 }
 
-main div.formularioContacto form div input {
-    width: 600px;
-    height: 25px;
+form.contacto input {
+    height: 56px;
+    padding: 16px;
+    flex-basis: 75%;
+    color: black;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+input:hover {
+    border: 3px solid rgb(216, 104, 0);
+}
+
+form.contacto textarea {
+    flex-basis: 100%;
+    resize: vertical;
+    min-height: 100px;
+    max-height: 200px;
+    padding: 16px;
 }
 
 /* Estilos Footer*/
@@ -603,16 +585,27 @@ footer {
     background-color: #884a39;
 }
 
+footer.footerContacto {
+    position:absolute;
+    bottom:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #884a39;
+}
+
 footer p {
     color: white;
     padding: 12px 0 0 4px;
     align-items: center;
 }
 
-footer div.redesSociales a img {
+footer div.redesSociales a img, footer.footerContacto div.redesSociales a img {
     width: 34px;
     padding-right: 8px;
 }
+
 
 
 /* MEDIA QUERIES*/
@@ -715,23 +708,9 @@ footer div.redesSociales a img {
 /* Media Query*/
 @media (max-width:1388px) {
 
+    /*Catalogo*/
     div.distribucion {
         grid-template-columns: 1fr;
-    }
-
-    header {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-    }
-
-    header nav ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        padding-right: 0;
-        list-style: none;
     }
 
     main .textos h1 {
@@ -753,6 +732,7 @@ footer div.redesSociales a img {
         top: 0;
         background-color: #DBA966;
         border: 2px solid black;
+        height: 45vh;
     }
 
     div.distribucion aside.encargoDisco h2 {
@@ -766,6 +746,23 @@ footer div.redesSociales a img {
 }
 
 @media (max-width:990px) {
+
+    /*Catalogo*/
+    header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding-right: 0;
+        list-style: none;
+    }
+
 
     div.distribucion {
         display: grid;
@@ -846,11 +843,17 @@ footer div.redesSociales a img {
         box-shadow: 6px 8px 10px #fdac42;
         height: 320px;
     }
+
+    footer.footerContacto {
+        position: relative;;
+        top:346px;
+    }
 }
 
 @media (max-width:645px) {
-    
-    div.distribucion div.panelesCostado aside.encargoDisco{
+
+    /*Catalogo*/
+    div.distribucion div.panelesCostado aside.encargoDisco {
         display: none;
     }
 
@@ -919,6 +922,11 @@ footer div.redesSociales a img {
         background-color: #884a39;
     }
 
+    footer.footerContacto {
+        position: relative;;
+        top:100px;
+    }
+
     footer p {
         font-size: 12px;
         color: white;
@@ -926,8 +934,42 @@ footer div.redesSociales a img {
         align-items: center;
     }
 
-    footer div.redesSociales a img {
+    footer div.redesSociales a img, footer.footerContacto div.redesSociales a img{
         width: 34px;
         padding-right: 4px;
+    }
+
+    /*Formulario Contacto*/
+    main div.subTituloContacto {
+
+        font-size: 16px;
+        text-align: center;
+        padding: 5px;
+        margin: 10px 60px;
+        box-shadow: 6px 6px 3px #8d6358;
+    }
+
+    main div.subTituloContacto h2 {
+        font-size: 32px;
+    }
+
+    form.contacto {
+        margin: 20px auto;
+        max-width: 240px;
+        padding: 4px;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    form.contacto input {
+        height: 28px;
+        padding: 8px;
+        margin: auto;
+    }
+
+    form.contacto textarea {
+        min-height: 50px;
+        max-height: 100px;
+        padding: 8px;
     }
 }
