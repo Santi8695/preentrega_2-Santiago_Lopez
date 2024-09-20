@@ -10,24 +10,6 @@ body {
     background-color: #C38154;
 }
 
-#grilla {
-    display: grid;
-    grid-template-areas:
-        "header"
-        "hero"
-        "lista"
-        "subDisco"
-        "disco"
-        "subRopa"
-        "ropa"
-        "subPosters"
-        "posters"
-        "encargo"
-        "footer";
-    grid-template-columns: 1fr;
-    gap: 6px;
-}
-
 /* Estilos Header */
 header {
     background-color: #884a39;
@@ -35,7 +17,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 4px;
-    grid-area: header;
 }
 
 header a img {
@@ -46,7 +27,7 @@ header nav ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 6px;
+    gap: 24px;
     padding-right: 16px;
     list-style: none;
 }
@@ -55,9 +36,15 @@ header nav ul li a {
     text-decoration: none;
 }
 
+header nav ul li a:hover,
+header nav ul li a:active {
+    padding: 4px;
+    background-color: #C38154;
+}
+
 .ul__li--tamaño {
     font-family: Montserrat;
-    font-size: 0.9rem;
+    font-size: 14px;
 }
 
 span.ico {
@@ -79,154 +66,195 @@ span.ico {
     background-color: #C38154;
 }
 
-/*Estilos de la hero section (Carrusel de imagenes)*/
-.hero {
-    height: 200px;
-    grid-area: hero;
-    margin-top: -6px;
+/* Estilos hero */
+main img {
+    width: 100vh;
+    height: 600px;
 }
 
-.hero img {
-    height: 200px;
+main .textos h1 {
+    position: absolute;
+    top: 180px;
+    left: 6px;
+    margin-left: 12px;
+    color: white;
+    font-size: 52px;
 }
 
-.textos {
-    display: none;
+.misEstilos {
+    max-height: 600px;
 }
 
-/*Distribucion de Catalogo*/
-
-
-/*Formulario de encargo de disco*/
-.encargoDisco {
-    grid-area: encargo;
-    max-width: 440px;
-    margin: 8px;
-    background-color: #DBA966;
-    border: 2px solid black;
-    z-index: 4;
-}
-
-.encargoDisco h2 {
+main .textos span {
+    display: block;
     text-align: center;
-    font-size: 1.6rem;
 }
 
-.encargoDisco form {
+main .textos span.nombrePag {
+    display: inline;
+    color: rgb(255, 136, 0);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+div.distribucion {
+    display: grid;
+    grid-template-columns: 420px auto;
+    grid-template-rows: 1fr;
+    margin: 16px;
+    gap: 16px;
+}
+
+/* Estilos aside */
+div.distribucion div.panelesCostado aside.encargoDisco {
     display: flex;
     flex-direction: column;
-}
-
-.encargoDisco label {
-    font-size: 1rem;
-    margin: 4px 8px 0 0;
     justify-content: center;
     align-items: center;
-    text-align: end;
+    background-color: #DBA966;
+    border: 2px solid black;
 }
 
-.encargoDisco input {
-    margin: 0 8px 4px 0;
-    height: 32px;
+div.distribucion aside.encargoDisco {
+    display: flex;
+    color: #000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: sticky;
+    top: 340px;
+    height: 50vh;
 }
 
-/*Distribucion interna del formulario y estilos de los botones*/
-.elemento {
+div.distribucion aside.encargoDisco form div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-}
-
-.botones {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-}
-
-.botones button {
-    padding: 4px;
-    margin: 4px 12px 4px 0;
-    border-radius: 20px;
+    grid-template-rows: repeat(2, 1fr);
 }
 
 
-/*Estilos Flecha (para regresar a arriba de la pagina)*/
-.flechaSubir {
-    display: none;
+div.distribucion aside.encargoDisco h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: bolder;
 }
 
+div.distribucion aside.encargoDisco form input {
+    margin: 8px;
+}
 
-/*Estilos de la lista que actua como indice del catalogo*/
-.lista {
-    grid-area: lista;
-    display: flex;
-    flex-direction: column;
+.formulariosEncargo input:focus {
+    border: 4px solid #da8405;
+    background-color: #e9d3b7;
+}
+
+div.distribucion aside.encargoDisco form label {
+    font-size: 16px;
+    margin: auto;
+}
+
+.subir,
+.resetear {
+    border-radius: 32px;
+    width: 120px;
+    margin: auto;
+    margin-top: 32px;
+}
+
+.subir:hover,
+.resetear:hover {
+    background-color: #d3d1d1;
+}
+
+div.distribucion div.flechaSubir {
+    position: sticky;
+    top: 880px;
+    text-align: start;
     justify-content: center;
+}
+
+div.distribucion div.flechaSubir img.flecha {
+    width: 60px;
+    height: 60px;
+}
+
+div.distribucion form.formulariosEncargo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilos Discos y catalogos*/
+/* indice catalogo */
+div.distribucion section.discos aside.lista {
     background-color: #DBA966;
     border: 2px solid black;
-    margin: 0 8px;
-}
-
-.lista ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-}
-
-.lista ul li {
-    font-size: 1.5rem;
-}
-
-.lista ul li a {
-    text-decoration: none;
-    color: black;
-
-}
-
-/*Estilos subtitulos que encabezan elementos del catalogo*/
-.subtituloDisco,
-.subtituloRopa,
-.subtituloPosters {
-    background-color: #884A39;
-    color: white;
-    border: 2px solid black;
-    font-size: 2rem;
-    text-align: center;
-    padding: 8px;
-    margin: 0 4px;
-}
-
-.subtituloDisco {
-    grid-area: subDisco;
-}
-
-.catalogo {
-    grid-area: disco;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-column: 1/5;
 }
 
-.tarjetaDisco {
+div.distribucion section.discos aside.lista ul {
+    list-style: none;
+    padding: 16px;
+    text-align: center;
+}
+
+div.distribucion section.discos aside.lista ul li {
+    font-size: 24px;
+}
+
+div.distribucion section.discos aside.lista ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+div.distribucion section.discos aside.lista ul li a:hover {
+    color: #fff;
+    background-color: #884a39;
+    padding: 4px;
+}
+
+div.distribucion section.discos aside.lista ul li a:active {
+    color: #bbb;
+    background-color: #6e392a;
+}
+
+/* Estilos Sección Catálogo */
+div.distribucion section.discos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding-bottom: 16px;
+    justify-content: center;
+    text-align: center;
+}
+
+div.distribucion section.discos h2.subtitulo {
+    grid-column: 1/5;
+    border: 2px solid black;
+    background-color: #884a39;
+    color: white;
+    padding: 32px;
+}
+
+div.distribucion section.discos article {
+    border: 2px solid black;
+    max-width: 250px;
+    margin-left: 24px;
+}
+
+div.distribucion section.discos article.tarjetaDisco {
     background-color: #ffbd66;
     display: inline-block;
     border-radius: 12px;
     box-shadow: 6px 8px 10px #fdac42;
     height: 320px;
-    width: 240px;
-    border: 2px solid black;
-    text-align: center;
-    margin: 8px auto;
 }
 
-.tarjetaDisco img {
-    width: 240px;
-    height: 180px;
-    padding: 8px 16px;
-    
+div.distribucion section.discos article.tarjetaDisco:hover {
+    background-color: #e7ab5b;
 }
 
-.tarjetaDisco .precio {
+div.distribucion section.discos article.tarjetaDisco p.precio {
     color: rgb(255, 0, 0);
     font-weight: bolder;
 }
@@ -237,31 +265,353 @@ div.distribucion section.discos article img {
     padding: 8px;
 }
 
-.subtituloRopa {
-    grid-area: subRopa;
+/* Estilos del HTML de artistas */
+main div.img img {
+    height: 600px;
+    width: 100%;
 }
 
-.ropa {
-    grid-area: ropa;
-    display: grid;
-    grid-template-columns: 1fr;
+h2.subtitulo {
+    background-color: #884A39;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    padding: 10px;
+    margin: 8px;
+    border: 2px solid black;
 }
 
-.subtituloPosters {
-    grid-area: subPosters;
+article.artista1 h3 {
+    display: inline-block;
+    color: black;
+    background-color: #DBA966;
 }
 
-.posters {
-    grid-area: posters;
-    display: grid;
-    grid-template-columns: 1fr;
+article.artista1 section.nombreArtista h3 {
+    display: inline-block;
+    position: absolute;
+    color: black;
+    padding: 24px 128px;
+    font-size: 24px;
+    margin: 16px;
+    width: 450px;
+    height: 75px;
+    border: 2px solid black;
+    padding-bottom: 72px;
+    text-align: center;
+}
+
+article.artista1 section.nombreArtista img {
+    position: absolute;
+    top: 852px;
+    left: 16px;
+    width: 450px;
+    height: 600px;
+    border: 2px solid black;
+}
+
+article.artista1 section.informacion {
+    position: absolute;
+    top: 800px;
+    left: 512px;
+}
+
+article.artista1 section.informacion h3 {
+    display: inline-block;
+    text-align: center;
+    padding: 8px 250px;
+    border: 2px solid black;
+    background-color: #DBA966;
+}
+
+article.artista1 section.informacion p {
+    position: absolute;
+    top: 40px;
+    color: black;
+    background-color: #ffbd66;
+    border: 2px solid black;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 8px 4px;
+}
+
+article.artista1 section.informacion p span {
+    display: block;
+}
+
+article.artista1 section.informacion p span.grupos span,
+article.artista1 section.informacion p span.artistasRelacionados span {
+    padding-top: 8px;
+}
+
+article.artista1 section.discografiaLista {
+    position: absolute;
+    top: 1010px;
+    left: 512px;
+}
+
+article.artista1 section.discografiaLista h3 {
+    display: inline-block;
+    text-align: center;
+    padding: 8px 114px;
+    border: 2px solid black;
+    background-color: #DBA966;
+    width: 598px;
+}
+
+article.artista1 section.discografiaLista ul {
+    position: absolute;
+    top: 50px;
+    color: black;
+    background-color: #ffbd66;
+    padding: 8px;
+    border: 2px solid black;
+    font-family: 'Times New Roman', Times, serif;
+    width: 598px;
+    list-style: none;
+}
+
+article.artista1 section.discografiaLista ul li {
+    padding-top: 8px;
+    text-align: center;
+}
+
+article.artista1 section.redesArtista h3 {
+    display: inline-block;
+    position: absolute;
+    top: 1350px;
+    left: 512px;
+    text-align: center;
+    padding: 8px 102px;
+    border: 2px solid black;
+    background-color: #DBA966;
+}
+
+article.artista1 section.redesArtista a img {
+    width: 60px;
+    height: 60px;
+    margin: 4px;
+}
+
+section.redesArtista div.redesSociales {
+    display: inline-block;
+    background-color: #FFBD66;
+    position: relative;
+    top: 658px;
+    left: 512px;
+    display: flex;
+    flex-direction: row;
+    padding-left:160px;
+    padding-right: 20px;
+    width: 599px;
+    border: 2px solid black;
+}
+
+article.artista1 section.albumes {
+    padding-bottom: 20px;
+}
+
+article.artista1 section.albumes h3 {
+    display: inline-block;
+    background-color: #DBA966;
+    padding: 8px 215px;
+    border: 2px solid black;
+    position: relative;
+    left: 1180px;
+}
+
+article.artista1 section.albumes div.discosSpotify {
+    position: relative;
+    top: -19px;
+    right: 19px;
+    margin-left: 1199px;
+    ;
+    background-color: #ffbd66;
+    height: 620px;
+    border: 2px solid black;
+}
+
+
+/* estilos galeria*/
+
+main video.vid {
+    display: inline-block;
+    margin: 8px 128px;
+    height: 600px;
+    width: 85%;
+}
+
+article.fotos h1 {
+    background-color: #884A39;
+    color: white;
+    font-size: 48px;
+    text-align: center;
+    margin: 6px;
+    border: 2px solid black;
+}
+
+article.fotos h2 {
+    background-color: #DBA966;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    margin: 8px 64px;
+    border: 2px solid black;
+}
+
+article.fotos section.contenedorFotos img,
+section.contenedorVideos video {
+    width: 400px;
+    height: 280px;
+    margin: 16px 36px;
+    background-color: #ffbd66;
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 16px;
+}
+
+/* estilos sobre nosotros */
+main h1.tituloConocenos {
+    background-color: #884A39;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    padding: 10px;
+    margin: 8px;
+    border: 2px solid black;
+}
+
+section.historia article,
+section.horarios,
+section.ubicacion {
+    display: inline-block;
+    background-color: #ffbd66;
+    text-align: center;
+    margin: 24px;
+    border: 2px solid black;
+    padding: 8px 8px;
+}
+
+section.historia p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+section.historia p span.musicTrip {
+    color: #d66800;
+    font-weight: bolder;
+    font-family: Montserrat;
+    font-size: 14px;
+}
+
+section.historia p span.destacado {
+    color: #000000;
+    font-weight: bolder;
+    font-family: Montserrat;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+section.horarios {
+    margin: 8px 620px;
+}
+
+section.horarios table {
+    border: 2px solid black;
+}
+
+section.horarios table tr td {
+    border: 1px solid black;
+    fill: black;
+    text-align: center;
+    padding: 4px;
+}
+
+section.ubicacion {
+    margin: 8px 520px;
+}
+
+section.ubicacion h2 {
+    padding-bottom: 8px;
+}
+
+section.ubicacion div {
+    border: 2px solid black;
+}
+
+/* estilos contactanos*/
+main div.subTituloContacto {
+    background-color: #884A39;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 120px;
+    border: 2px solid black;
+    box-shadow: 12px 12px 6px #8d6358;
+}
+
+main div.subTituloContacto h2 {
+    color: rgb(255, 145, 0);
+    font-size: 64px;
+    text-align: center;
+    text-decoration: underline;
+
+}
+
+form.contacto {
+    background-color: #DBA966;
+    margin: 40px auto;
+    max-width: 420px;
+    border: 2px solid black;
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+}
+
+form.contacto label {
+    margin: auto;
+    text-align: center;
+    margin: auto;
+    color: rgb(0, 0, 0);
+}
+
+form.contacto input {
+    height: 56px;
+    padding: 16px;
+    flex-basis: 75%;
+    color: black;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+input:hover,
+form.contacto input:hover,
+textarea:hover {
+    border: 2px solid rgb(216, 104, 0);
+}
+
+form.contacto textarea {
+    flex-basis: 100%;
+    resize: vertical;
+    min-height: 100px;
+    max-height: 200px;
+    padding: 16px;
 }
 
 /* Estilos Footer*/
 footer {
-    margin-top: 16px;
-    grid-area: footer;
     position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #884a39;
+}
+
+footer.footerContacto {
+    position: absolute;
     bottom: 0;
     display: flex;
     justify-content: space-between;
@@ -278,10 +628,380 @@ footer p {
 
 footer div.redesSociales a img,
 footer.footerContacto div.redesSociales a img {
-    width: 26px;
+    width: 34px;
     padding-right: 8px;
 }
 
-/*MEDIA QUERIES*/
 
-/*Catalogo*/
+
+/* MEDIA QUERIES*/
+@media (max-width:1590px) {
+    /*Catalogo*/
+
+    /*flecha subir*/
+    div.distribucion div.flechaSubir {
+        position: sticky;
+        top: 740px;
+        text-align: start;
+        justify-content: center;
+    }
+
+    div.distribucion div.flechaSubir img.flecha {
+        width: 60px;
+        height: 60px;
+    }
+
+    main .textos h1 {
+        position: absolute;
+        top: 180px;
+        left: 6px;
+        margin-left: 12px;
+        color: white;
+        font-size: 42px;
+    }
+
+    div.distribucion section.discos aside.lista {
+        background-color: #DBA966;
+        border: 2px solid black;
+        display: grid;
+        grid-column: 1/4;
+        margin: auto;
+        padding: 0 48vh;
+    }
+
+    div.distribucion div.panelesCostado aside.encargoDisco {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #DBA966;
+        border: 2px solid black;
+    }
+
+    div.distribucion aside.encargoDisco {
+        display: flex;
+        height: 40vh;
+    }
+
+    div.distribucion aside.encargoDisco h2 {
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .subir,
+    .resetear {
+        width: 100px;
+        margin-top: 16px;
+    }
+
+    div.distribucion div.flechaSubir img.flecha {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Estilos Sección Catálogo */
+    div.distribucion section.discos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: auto;
+        gap: 16px 8px;
+    }
+
+    div.distribucion section.discos h2.subtitulo,
+    div.distribucion section.discos h2#posters {
+        grid-column: 1/4;
+        margin: auto;
+        padding: 2vh 48vh;
+    }
+
+    div.distribucion section.discos article {
+        border: 2px solid black;
+        max-width: 240px;
+    }
+
+    div.distribucion section.discos article.tarjetaDisco {
+        background-color: #ffbd66;
+        box-shadow: 4px 6px 8px #fdac42;
+        height: 320px;
+    }
+
+    div.distribucion section.discos article.tarjetaDisco p.precio {
+        color: rgb(255, 0, 0);
+        font-weight: bolder;
+    }
+}
+
+/* Media Query*/
+@media (max-width:1388px) {
+
+    /*Catalogo*/
+    div.distribucion {
+        grid-template-columns: 1fr;
+    }
+
+    main .textos h1 {
+        position: absolute;
+        top: 180px;
+        left: 6px;
+        margin-left: 12px;
+        color: white;
+        font-size: 42px;
+    }
+
+    div.distribucion section.discos aside.lista {
+        display: grid;
+        padding: 0 48vh;
+    }
+
+    div.distribucion div.panelesCostado aside.encargoDisco {
+        position: relative;
+        top: 0;
+        background-color: #DBA966;
+        border: 2px solid black;
+        height: 45vh;
+    }
+
+    div.distribucion aside.encargoDisco h2 {
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    div.distribucion div.flechaSubir {
+        display: none;
+    }
+}
+
+@media (max-width:990px) {
+
+    /*Catalogo*/
+    header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding-right: 0;
+        list-style: none;
+    }
+
+
+    div.distribucion {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    main .textos h1 {
+        display: none;
+    }
+
+    div.distribucion section.discos aside.lista {
+        display: none;
+        padding: 0 48vh;
+    }
+
+    div.distribucion section.discos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.distribucion section.discos article {
+        border: 2px solid black;
+        width: 250px;
+        margin: 0px;
+    }
+
+    div.distribucion div.panelesCostado aside.encargoDisco {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: #DBA966;
+        border: 2px solid black;
+        width: 64vh;
+        margin: auto;
+    }
+
+    div.distribucion aside.encargoDisco {
+        display: flex;
+        height: 45vh;
+        width: 50vh;
+    }
+
+    div.distribucion aside.encargoDisco h2 {
+        font-size: 20px;
+        width: 30vh;
+    }
+
+    .subir,
+    .resetear {
+        width: 70px;
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    div.distribucion section.discos h2.subtitulo {
+        display: none;
+    }
+
+    div.distribucion section.discos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin: auto;
+    }
+
+    div.distribucion section.discos article {
+        border: 2px solid black;
+        width: 250px;
+        margin-left: 24px;
+    }
+
+    div.distribucion section.discos article.tarjetaDisco {
+        background-color: #ffbd66;
+        display: inline-block;
+        border-radius: 12px;
+        box-shadow: 6px 8px 10px #fdac42;
+        height: 320px;
+    }
+
+    footer.footerContacto {
+        position: relative;
+        ;
+        top: 346px;
+    }
+}
+
+@media (max-width:645px) {
+
+    /*Catalogo*/
+    div.distribucion div.panelesCostado aside.encargoDisco {
+        display: none;
+    }
+
+
+    div.distribucion section.discos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.distribucion section.discos article {
+        display: grid;
+        border: 2px solid black;
+        width: 50vh;
+        margin: 0px;
+    }
+
+    div.distribucion div.panelesCostado aside.encargoDisco {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: #DBA966;
+        border: 2px solid black;
+        width: 40vh;
+        margin: auto;
+        height: 45vh;
+        width: 45vh;
+    }
+
+    div.distribucion aside.encargoDisco h2 {
+        font-size: 20px;
+        width: 30vh;
+    }
+
+    .subir,
+    .resetear {
+        width: 70px;
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    div.distribucion section.discos h2.subtitulo {
+        display: none;
+    }
+
+    div.distribucion section.discos {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: auto;
+    }
+
+    div.distribucion section.discos article {
+        border: 2px solid black;
+        width: 40vh;
+        margin-left: 24px;
+    }
+
+    footer {
+        position: relative;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: #884a39;
+    }
+
+    footer.footerContacto {
+        position: relative;
+        ;
+        top: 100px;
+    }
+
+    footer p {
+        font-size: 12px;
+        color: white;
+        padding: 6px 0 0 2px;
+        align-items: center;
+    }
+
+    footer div.redesSociales a img,
+    footer.footerContacto div.redesSociales a img {
+        width: 34px;
+        padding-right: 4px;
+    }
+
+    /*Formulario Contacto*/
+    main div.subTituloContacto {
+
+        font-size: 16px;
+        text-align: center;
+        padding: 5px;
+        margin: 10px 60px;
+        box-shadow: 6px 6px 3px #8d6358;
+    }
+
+    main div.subTituloContacto h2 {
+        font-size: 32px;
+    }
+
+    form.contacto {
+        margin: 20px auto;
+        max-width: 240px;
+        padding: 4px;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    form.contacto input {
+        height: 28px;
+        padding: 8px;
+        margin: auto;
+        width: 30vh;
+    }
+
+    form.contacto textarea {
+        min-height: 50px;
+        max-height: 100px;
+        padding: 8px;
+    }
+
+
+}
